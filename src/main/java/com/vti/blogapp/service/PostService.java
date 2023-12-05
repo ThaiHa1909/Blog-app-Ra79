@@ -12,4 +12,5 @@ public interface PostService {
     Page<PostDto> findAll(Pageable pageable);
     PostDto create (PostCreateForm form);
     PostDto update (PostUpdateForm form, Long id);
+    void deleteById(Long id);
 }
