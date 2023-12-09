@@ -5,6 +5,7 @@ import com.vti.blogapp.dto.PostDto;
 import com.vti.blogapp.entity.Comment;
 import com.vti.blogapp.entity.Post;
 import com.vti.blogapp.form.CommentCreateForm;
+import com.vti.blogapp.form.CommentUpdateForm;
 import com.vti.blogapp.form.PostCreateForm;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,15 @@ public class CommentMapper {
         comment.setBody(form.getBody());
         return comment;
     }
+
+    public static Comment map(CommentUpdateForm form, Comment comment){
+        comment.setName(form.getName());
+        comment.setEmail(form.getEmail());
+        comment.setBody(form.getBody());
+        return comment;
+    }
+
+
 
 
     public static CommentDto map (Comment comment){
