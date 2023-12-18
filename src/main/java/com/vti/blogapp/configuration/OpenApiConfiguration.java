@@ -11,11 +11,11 @@ import io.swagger.v3.oas.annotations.servers.Server;
         info = @Info(
                 title = "Blog Application REST APIs",
                 description = "Blog Application REST APIs Documentation",
-                termsOfService = "https://github.com/ThaiHa1909/Blog-app-Ra79",
+                termsOfService = "https://github.com/khoa-omega/blog-app",
                 contact = @Contact(
-                        name = "Nguyen Thi Thai Ha",
-                        url = "https://github.com/ThaiHa1909",
-                        email = "misaki.janet@gmail.com"
+                        name = "Nguyễn Văn Khoa",
+                        url = "https://github.com/khoa-omega",
+                        email = "nvkhoa05@gmail.com"
                 ),
                 license = @License(
                         name = "Apache 2.0",
@@ -31,7 +31,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
                 description = "Blog Application Github",
                 url = "https://github.com/khoa-omega/blog-app"
         )
-//
+
 //@SecurityScheme(
 //        type = SecuritySchemeType.HTTP,
 //        name = "Bearer Authentication",
