@@ -25,6 +25,8 @@ public class SecurityConfiguration {
                 .csrf(AbstractHttpConfigurer :: disable)
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(customizer -> customizer
+                        .requestMatchers(HttpMethod.DELETE)
+                        .hasAuthority("SCOPE_ADMIN")
                         .requestMatchers(HttpMethod.POST, "/api/v1/users")
                         .permitAll()
                         .anyRequest()
@@ -35,6 +37,7 @@ public class SecurityConfiguration {
                 .sessionManagement(customizer -> customizer
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))// khong luu tru phien dang nhap
                 .exceptionHandling(customizer -> customizer
+                        .accessDeniedHandler(errorHandler)
                         .authenticationEntryPoint(errorHandler)
                 )
                 .httpBasic(AbstractHttpConfigurer :: disable)
